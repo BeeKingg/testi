@@ -1,4 +1,5 @@
 <h2 align="centre">Skyla Music Player</h2>
+<p align = "center"><a herf = "https://t.me/SkylaMusicBot" alt = "SkylaMusic"><img src = "https://telegra.ph/file/5af32594e504236410892.jpg" width = "900"></a></p>
 
 <h3>Requirements 📝</h3>
 
