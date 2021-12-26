@@ -141,7 +141,7 @@ async def play(_, message: Message):
 
 💬 [{BOT_NAME}](tg://user?id=2129034376) ᴍᴇᴍᴜɴɢᴋɪɴᴋᴀɴ ᴀɴᴅᴀ ᴜɴᴛᴜᴋ ᴍᴇᴍᴜᴛᴀʀ ᴍᴜsɪᴋ ᴘᴀᴅᴀ ɢʀᴜᴘ ᴍᴇʟᴀʟᴜɪ ᴏʙʀᴏʟᴀɴ sᴜᴀʀᴀ ʏᴀɴɢ ʙᴀʀᴜ ᴅɪ ᴛᴇʟᴇɢʀᴀᴍ!
 
-🔰 ᴛʜᴀɴᴋs ᴛᴏ : @Zxyune**
+🔰 ᴛʜᴀɴᴋs ᴛᴏ : [Takichan](https://t.me/Zxyune)**
 
 """,
             parse_mode="markdown",
