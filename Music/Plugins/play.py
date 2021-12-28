@@ -145,7 +145,7 @@ async def play(_, message: Message):
     if chat_id in BANNED_USERS:
         await app.send_message(
             chat_id,
-            text=f"**❌ Anda telah di ban\nUbtuk menggunakan bot anda harus join di [ᴄʜᴀɴɴᴇʟ](https://t.me/{CHANNEL})**",
+            text=f"**❌ Anda telah di ban\nUbtuk menggunakan bot anda harus join di [Channel](https://t.me/{CHANNEL})**",
             reply_to_message_id=message.message_id,
         )
         return
@@ -157,7 +157,7 @@ async def play(_, message: Message):
             if user.status == "kicked":
                 await app.send_message(
                     chat_id,
-                    text=f"**❌ Anda telah di ban\nUbtuk menggunakan bot anda harus join di [ᴄʜᴀɴɴᴇʟ](https://t.me/{CHANNEL})**",
+                    text=f"**❌ Anda telah di ban\nUbtuk menggunakan bot anda harus join di [Channel](https://t.me/{CHANNEL})**",
                     parse_mode="markdown",
                     disable_web_page_preview=True,
                 )
@@ -166,13 +166,13 @@ async def play(_, message: Message):
             await app.send_message(
                 chat_id,
                 text=f"""
-**Halo {rpk} Untuk menghindari penggunaan yang berlebihan bot ini di khususkan untuk yang sudah join di channel kami!**
+**Halo {rpk} Untuk menghindari penggunaan yang berlebihan bot ini di khususkan untuk yang sudah join di group kami!**
 """,
                 reply_markup=InlineKeyboardMarkup(
                     [
                         [
                             InlineKeyboardButton(
-                                "ᴄʜᴀɴɴᴇʟ",
+                                "Join Channel",
                                 url=f"https://t.me/{CHANNEL}",
                             )
                         ]
