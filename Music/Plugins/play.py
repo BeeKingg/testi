@@ -139,7 +139,7 @@ CHANNEL = os.getenv("CHANNEL")
 @Client.on_message(command(["play", f"play@{BOT_USERNAME}", "p"]))
 async def play(_, message: Message):
     chat_id = message.chat.id
-user_id = message.from_user.id
+    user_id = message.from_user.id
     user_name = message.from_user.first_name
     rpk = "[" + user_name + "](tg://user?id=" + str(user_id) + ")"
     if chat_id in BANNED_USERS:
