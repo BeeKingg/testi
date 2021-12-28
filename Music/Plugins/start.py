@@ -128,20 +128,6 @@ Untuk bantuan silahkan klik tombol dibawah.
     return
 
 
-@Client.on_message(filters.group & filters.command(["start", "help"]))
-async def start(_, message: Message):
-    chat_id = message.chat.id
-    await _.send_message(
-        chat_id,
-        f"""
-✨ Hi {message.from_user.mention()}!
-Thanks for using {BOT_NAME} in {message.chat.title}.
-For any assistance or help, checkout our support group.""",
-       disable_web_page_preview=True,
-       reply_markup=InlineKeyboardMarkup(
-          [[InlineKeyboardButton("Support Channel", url="https://t.me/Takichanbot")]]),
-    )
-
 @Client.on_message(filters.private & filters.incoming & filters.command("start"))
 async def play(_, message: Message):
     if len(message.command) == 1:
