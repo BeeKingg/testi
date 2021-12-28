@@ -19,5 +19,5 @@ __**New {what}**__
 **User ID:** `{message.from_user.id}`
 **Chat Link:** {chatusername}
 **Query:** {message.text}"""
-    await ASS_ACC.send_message(LOG_GROUP_ID, f"{logger_text}", disable_web_page_preview=True)
+    await ASS_ACC.send_message(LOG_GROUP_ID, f"{logger_text}", disable_web_page_preview=False)
     
