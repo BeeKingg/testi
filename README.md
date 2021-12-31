@@ -52,6 +52,7 @@
 #### Contributors
 - [Kyy](https://github.com/muhammadrizky16): Devs Nasty
 - [KenKan](https://github.com/kenkansaja): Contributor
+- [Skyla](https://github.com/Cangcimenn): Devs Skyla
 - [xD_ShaShank](https://github.com/theshashankk): Yukki Dev
 - [VegetaxD](http://github.com/VegetaxD): Yukki Owner 
 - [Laky](https://github.com/Laky-64): PyTgCalls Developer
