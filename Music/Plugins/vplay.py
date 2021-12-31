@@ -87,12 +87,10 @@ async def vplay(c: Client, message: Message):
         await message.reply_text(
             f"""
 💡 Untuk menggunakan saya, Saya perlu menjadi admin dengan izin:
-
 » ❌ Hapus pesan
 » ❌ Blokir pengguna
 » ❌ Tambah pengguna
 » ❌ Kelola obrolan suara
-
 ✨ Powered by: [{BOT_NAME}](t.me/{BOT_USERNAME})
 """,
             disable_web_page_preview=True,
@@ -102,9 +100,7 @@ async def vplay(c: Client, message: Message):
         await message.reply_text(
             f"""
 💡 Untuk menggunakan saya, Saya perlu menjadi admin dengan izin:
-
 » ❌ Kelola obrolan suara
-
 ✨ Powered by: [{BOT_NAME}](t.me/{BOT_USERNAME})
 """,
             disable_web_page_preview=True,
@@ -114,9 +110,7 @@ async def vplay(c: Client, message: Message):
         await message.reply_text(
             f"""
 💡 Untuk menggunakan saya, Saya perlu menjadi admin dengan izin:
-
 » ❌ Hapus pesan
-
 ✨ Powered by: [{BOT_NAME}](t.me/{BOT_USERNAME})
 """,
             disable_web_page_preview=True,
@@ -126,9 +120,7 @@ async def vplay(c: Client, message: Message):
         await message.reply_text(
             f"""
 💡 Untuk menggunakan saya, Saya perlu menjadi admin dengan izin:
-
 » ❌ Tambah pengguna
-
 ✨ Powered by: [{BOT_NAME}](t.me/{BOT_USERNAME})
 """,
             disable_web_page_preview=True,
@@ -198,13 +190,10 @@ async def vplay(c: Client, message: Message):
                     photo="cache/IMG_20211230_211039_090.jpg",
                     caption=f"""
 💡 **Trek ditambahkan ke antrian**
-
 🏷 **Nama:** [{songname[:999]}]({link})
 🎧 **Atas permintaan:** {requester}
-
 #️⃣ **Posisi antrian** {pos}
 """,
-                    disable_web_page_preview=True,
                     reply_markup=keyboard,
                 )
             else:
@@ -230,13 +219,10 @@ async def vplay(c: Client, message: Message):
                     photo="cache/IMG_20211230_211039_090.jpg",
                     caption=f"""
 ▶️ **Streaming video dimulai**
-
 🏷 **Nama:** [{songname[:999]}]({link})
 🎧 **Atas permintaan:** {requester}
-
 💬 **Diputar di:** {message.chat.title}
 """,
-                    disable_web_page_preview=True,
                     reply_markup=keyboard,
                 )
 
@@ -269,19 +255,17 @@ async def vplay(c: Client, message: Message):
                         await loser.delete()
                         requester = f"[{message.from_user.first_name}](tg://user?id={message.from_user.id})"
                         await message.reply_photo(
-                    photo="cache/IMG_20211230_211039_090.jpg",
-                    caption=f"""
+                            photo="cache/IMG_20211230_211039_090.jpg",
+                            caption=f"""
 💡 **Trek ditambahkan ke antrian**
-
 🏷 **Nama:** [{songname[:999]}]({url})
 ⏱️ **Durasi:** {duration}
 🎧 **Atas permintaan:** {requester}
-
 #️⃣ **Posisi antrian** {pos}
 """,
-                            disable_web_page_preview=True,
                             reply_markup=keyboard,
                         )
+                    
                     else:
                         try:
                             await call_py.join_group_call(
@@ -296,18 +280,16 @@ async def vplay(c: Client, message: Message):
                             add_to_queue(chat_id, songname, ytlink, url, "Video", Q)
                             await loser.delete()
                             requester = f"[{message.from_user.first_name}](tg://user?id={message.from_user.id})"
+                            thumb ="cache/IMG_20211230_165039_159.jpg"
                             await message.reply_photo(
-                    photo="cache/IMG_20211230_211039_090.jpg",
-                    caption=f"""
+                                photo="cache/IMG_20211230_211039_090.jpg",
+                                caption=f"""
 ▷ **Memutar video dimulai**
-
 🏷 **Nama:** [{songname[:999]}]({url})
 ⏱️ **Durasi:** {duration}
 🎧 **Atas permintaan:** {requester}
-
 💬 **Diputar di:** {message.chat.title}
 """,
-                                disable_web_page_preview=True,
                                 reply_markup=keyboard,
                             )
                         except Exception as ep:
