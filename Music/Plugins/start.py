@@ -35,25 +35,6 @@ from pyrogram.types import (
 )
 
 
-def start_pannel():
-    buttons = [
-        [
-            InlineKeyboardButton(text="sᴜᴘᴘᴏʀᴛ​", url=f"https://t.me/{GROUP}"),
-            InlineKeyboardButton(text="ᴜᴘᴅᴀᴛᴇs", url=f"https://t.me/{CHANNEL}"),
-        ],
-        [
-            InlineKeyboardButton("📚 ᴄᴏᴍᴍᴀɴᴅ​ 📚", url="https://telegra.ph/Comands-12-25"),
-        ],
-        [
-            InlineKeyboardButton("🛠️ ᴏᴡɴᴇʀ 🛠️", url="https://t.me/Zxyune"),
-        ],
-    ]
-    return (
-        "🎛 **{BOT_NAME} Merupakan salah satu dari bot telegram yang bisa memutar musik di grup**",
-        buttons,
-    )
-
-
 pstart_markup = InlineKeyboardMarkup(
     [
         [
