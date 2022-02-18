@@ -55,6 +55,15 @@ async def on_closed(client: PyTgCalls, chat_id: int) -> None:
     await remove_active_chat(chat_id)
 
 
+@pytgcalls.on_left()
+async def left_handler(_, chat_id: int):
+    try:
+        queues.clear(chat_id)
+    except QueueEmpty:
+        pass
+    await remove_active_chat(chat_id)
+
+
 @pytgcalls.on_stream_end()
 async def on_stream_end(client: PyTgCalls, update: Update) -> None:
     chat_id = update.chat_id
@@ -81,7 +90,7 @@ Title :- {ctitle}
 Downloading....
 
 {url}"""
-                okay = await smexy.send_message(LOG_GROUP_ID, f"{logger_text}", disable_web_page_preview=True)
+                okay = await app.send_message(LOG_GROUP_ID, f"{logger_text}", disable_web_page_preview=True)
                 try:
                     with yt_dlp.YoutubeDL(ytdl_opts) as ytdl:
                         x = ytdl.extract_info(url, download=False)
